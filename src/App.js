@@ -4,7 +4,7 @@ import { HashRouter } from "react-router-dom";
 
 function App() {
   return (
-    <HashRouter base="/">
+    <HashRouter base="/accueil">
       <div className="App">
         <header className="App-header">
           <img src={logo} className="App-logo" alt="logo" />

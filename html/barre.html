@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="fr">
+    <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Timeline</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <style>
+        /* Styles pour la barre de navigation */
+        .sidebar {
+          width: 200px;
+          height: 100vh;
+          background-color: #4a5568;
+          position: fixed;
+          top: 0;
+          left: -200px;
+          transition: left 0.3s ease;
+        }
+    
+        .sidebar.active {
+          left: 0;
+        }
+    
+        .sidebar ul {
+          padding: 0;
+          margin: 0;
+          list-style: none;
+        }
+    
+        .sidebar li {
+          padding: 1rem;
+          color: #ffffff;
+        }
+    
+        .sidebar li:hover {
+          background-color: #2d3748;
+        }
+    
+        /* Style pour le bouton image */
+        #sidebar-toggle {
+          position: absolute;
+          top: 0;
+          left: 0;
+          margin: 20px;
+          transition: margin-left 0.3s ease;
+        }
+    
+        /* Animation du bouton image lors de l'apparition de la barre de navigation */
+        .sidebar.active ~ #sidebar-toggle {
+          margin-left: 220px;
+        }
+    
+        /* Style pour le bouton de redirection */
+        #redirect-button {
+          position: fixed;
+          bottom: 20px;
+          right: 20px;
+        }
+      </style>
+    </head>
+    <body>
+        <img id="sidebar-toggle" src="/image/menu.png" alt="Menu" class="cursor-pointer">
+        <!-- Barre de navigation -->
+        <div class="sidebar">
+          <ul>
+            <li>Accueil</li>
+            <li>Portfolio</li>
+            <li>Contact</li>
+          </ul>
+        </div>
+        <section style="background-color: #ffffff;">
+            <div class="bg-white text-black py-8">
+              <div class="container mx-auto flex flex-col items-start md:flex-row my-12 md:my-24">
+                <div class="flex flex-col w-full sticky md:top-36 lg:w-1/3 mt-2 md:mt-12 px-8">
+                  <p class="ml-2 text-blue-300 uppercase tracking-loose">Working Process</p>
+                  <p class="text-3xl md:text-4xl leading-normal md:leading-relaxed mb-2">Working Process of Fest</p>
+                  <p class="text-sm md:text-base text-gray-900 mb-4">
+                    Here’s your guide to the tech fest 2021 process. Go through all the steps to know the exact process of the
+                    fest.
+                  </p>
+                  <a href="#"
+                    class="bg-transparent mr-auto hover:bg-blue-300 text-blue-300 hover:text-black rounded shadow hover:shadow-lg py-2 px-4 border border-blue-300 hover:border-transparent">
+                    Explore Now</a>
+                </div>
+                <div class="ml-0 md:ml-12 lg:w-2/3 sticky">
+                  <div class="container mx-auto w-full h-full">
+                    <div class="relative wrap overflow-hidden p-10 h-full">
+                      <div class="border-2-2 border-blue-555 absolute h-full border"
+                        style="right: 50%; border: 2px solid #3B82F6; border-radius: 1%;"></div>
+                      <div class="border-2-2 border-blue-555 absolute h-full border"
+                        style="left: 50%; border: 2px solid #3B82F6; border-radius: 1%;"></div>
+                      <div class="mb-8 flex justify-between flex-row-reverse items-center w-full left-timeline">
+                        <div class="order-1 w-5/12"></div>
+                        <div class="order-1 w-5/12 px-1 py-4 text-right">
+                          <p class="mb-3 text-base text-blue-300">1 Septembre, 2022</p>
+                          <h4 class="mb-3 font-bold text-lg md:text-2xl">Entré en BTS</h4>
+                          <p class="text-sm md:text-base leading-snug text-gray-900 text-opacity-100">
+                            Début des AP, Egnaro en réseau (Montage d'un réseau d'entreprise), Site en Developement(Premier site html)
+                          </p>
+                          <button class="mb-3 w-32 bg-white tracking-wide text-gray-800 font-bold rounded border-b-2 border-blue-500 hover:border-blue-600 hover:bg-blue-500 hover:text-white shadow-md py-2 px-6 inline-flex items-center">
+                                <span class="mx-auto">Voir les AP</span>
+                           </button>
+                        </div>
+                      </div>
+                      <div class="mb-8 flex justify-between items-center w-full right-timeline">
+                        <div class="order-1 w-5/12"></div>
+                        <div class="order-1  w-5/12 px-1 py-4 text-left">
+                          <p class="mb-3 text-base text-blue-300">Février, 2023</p>
+                          <h4 class="mb-3 font-bold text-lg md:text-2xl">Semestre 2</h4>
+                          <p class="text-sm md:text-base leading-snug text-gray-900 text-opacity-100">
+                            Le choix de la spécialité etant fait je ne ferais plus que tu dev. Début AP 2 : Psychoquizz
+                          </p>
+                          <button class="mb-3 w-32 bg-white tracking-wide text-gray-800 font-bold rounded border-b-2 border-blue-500 hover:border-blue-600 hover:bg-blue-500 hover:text-white shadow-md py-2 px-6 inline-flex items-center">
+                            <span class="mx-auto">Voir l'AP</span>
+                          </button>
+                        </div>
+                      </div>
+                      <div class="mb-8 flex justify-between flex-row-reverse items-center w-full left-timeline">
+                        <div class="order-1 w-5/12"></div>
+                        <div class="order-1 w-5/12 px-1 py-4 text-right">
+                          <p class="mb-3 text-base text-blue-300"> Mai, 2022</p>
+                          <h4 class="mb-3 font-bold text-lg md:text-2xl">Début du stage </h4>
+                          <p class="text-sm md:text-base leading-snug text-gray-900 text-opacity-100">
+                            J'ai effectué mon stage chez Assistant office a Plestin-les-grèves
+                          </p>
+                          <button class="mb-3 w-32 bg-white tracking-wide text-gray-800 font-bold rounded border-b-2 border-blue-500 hover:border-blue-600 hover:bg-blue-500 hover:text-white shadow-md py-2 px-6 inline-flex items-center">
+                            <span class="mx-auto">Voir le Projet</span>
+                          </button>
+                        </div>
+                      </div>
+                      <div class="mb-8 flex justify-between items-center w-full right-timeline">
+                        <div class="order-1 w-5/12"></div>
+                        <div class="order-1  w-5/12 px-1 py-4">
+                          <p class="mb-3 text-base text-blue-300">Septembre, 2023</p>
+                          <h4 class="mb-3 font-bold  text-lg md:text-2xl text-left">2éme Année</h4>
+                          <p class="text-sm md:text-base leading-snug text-gray-900 text-opacity-100">
+                            Pour l'ap de ce semestre nous devions faire un site Web de type chronopost ou mondial relais pour la gestions des colis
+                          </p>
+                          <button class="mb-3 w-32 bg-white tracking-wide text-gray-800 font-bold rounded border-b-2 border-blue-500 hover:border-blue-600 hover:bg-blue-500 hover:text-white shadow-md py-2 px-6 inline-flex items-center">
+                            <span class="mx-auto">Voir le Projet</span>
+                          </button>
+                        </div>
+                      </div>
+                      <div class="mb-8 flex justify-between flex-row-reverse items-center w-full left-timeline">
+                        <div class="order-1 w-5/12"></div>
+                        <div class="order-1 w-5/12 px-1 py-4 text-right">
+                          <p class="mb-3 text-base text-blue-300"> Février, 2024</p>
+                          <h4 class="mb-3 font-bold text-lg md:text-2xl">Stage</h4>
+                          <p class="text-sm md:text-base leading-snug text-gray-900 text-opacity-100">
+                            J'ai effectué ce stage chez Studio Sale qui est une agence de Webdesign situé a Perros-Guirec 
+                          </p>
+                          <button class="mb-3 w-32 bg-white tracking-wide text-gray-800 font-bold rounded border-b-2 border-blue-500 hover:border-blue-600 hover:bg-blue-500 hover:text-white shadow-md py-2 px-6 inline-flex items-center">
+                            <span class="mx-auto">Voir le Projet</span>
+                          </button>
+                        </div>
+                      </div>
+                      <div class="mb-8 flex justify-between items-center w-full right-timeline">
+                        <div class="order-1 w-5/12"></div>
+                        <div class="order-1  w-5/12 px-1 py-4">
+                          <p class="mb-3 text-base text-blue-300">Mars, 2024 </p>
+                          <h4 class="mb-3 font-bold  text-lg md:text-2xl text-left">AP Semestre 2</h4>
+                          <p class="text-sm md:text-base leading-snug text-gray-900 text-opacity-100">
+                            Nous devons réaliser une application de fidelite de restauration rapide en solo 
+                          </p>
+                          <button class="mb-3 w-32 bg-white tracking-wide text-gray-800 font-bold rounded border-b-2 border-blue-500 hover:border-blue-600 hover:bg-blue-500 hover:text-white shadow-md py-2 px-6 inline-flex items-center">
+                            <span class="mx-auto">Voir le Projet</span>
+                          </button>
+                        </div>
+                      </div>
+                    </div>
+                    <img class="mx-auto -mt-36 md:-mt-36"
+                      src="https://user-images.githubusercontent.com/54521023/116968861-ef21a000-acd2-11eb-95ac-a34b5b490265.png" />
+                  </div>
+                </div>
+              </div>
+            </div>
+        </section>
+        <script>
+            // Fonction pour afficher ou masquer la barre de navigation
+            document.getElementById('sidebar-toggle').addEventListener('click', function() {
+            document.querySelector('.sidebar').classList.toggle('active');
+            });
+            document.getElementById('sidebar').addEventListener('mouseleave', function() {
+            document.querySelector('.sidebar').classList.remove('active');
+            });
+        </script>        
+    </body>
+</html>

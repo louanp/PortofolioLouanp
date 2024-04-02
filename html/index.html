@@ -60,7 +60,7 @@
 </head>
 <body class="bg-gray-100 flex flex-col items-center justify-center h-screen">
   <!-- Bouton image pour afficher la barre de navigation -->
-  <img id="sidebar-toggle" src="menu_icon.png" alt="Menu" class="cursor-pointer">
+  <img id="sidebar-toggle" src="/image/menu.png" alt="Menu" class="cursor-pointer">
 
   <!-- Barre de navigation -->
   <div class="sidebar">
@@ -84,7 +84,7 @@
   </div>
 
   <!-- Bouton de redirection -->
-  <a href="page_suivante.html" id="redirect-button" class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">
+  <a href="barre.html" id="redirect-button" class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">
     Page Suivante
   </a>
 
@@ -92,6 +92,9 @@
     // Fonction pour afficher ou masquer la barre de navigation
     document.getElementById('sidebar-toggle').addEventListener('click', function() {
       document.querySelector('.sidebar').classList.toggle('active');
+    });
+    document.getElementById('sidebar').addEventListener('mouseleave', function() {
+      document.querySelector('.sidebar').classList.remove('active');
     });
   </script>
 </body>

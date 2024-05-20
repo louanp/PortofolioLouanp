@@ -10,7 +10,7 @@
         .sidebar {
           width: 200px;
           height: 100vh;
-          background-color: #4a5568;
+          background-color: #fefce8;
           position: fixed;
           top: 0;
           left: -200px;
@@ -29,11 +29,11 @@
     
         .sidebar li {
           padding: 1rem;
-          color: #ffffff;
+          color: #1D4ED8;
         }
     
         .sidebar li:hover {
-          background-color: #2d3748;
+          background-color: #5372c7;
         }
     
         /* Style pour le bouton image */
@@ -56,30 +56,39 @@
           bottom: 20px;
           right: 20px;
         }
+
       </style>
     </head>
-    <body>
-        <img id="sidebar-toggle" src="../image/menu.png" alt="Menu" class="cursor-pointer w-10">
+    <body >
+      <header class="w-full bg-yellow-50 py-4">
+        <h1 class="text-center text-5xl font-bold text-blue-700">Mon parcours</h1>
+      </header> 
+        <img id="sidebar-toggle" src="../image/menuBleu.png" alt="Menu" class="cursor-pointer w-10">
         <!-- Barre de navigation -->
         <div class="sidebar">
           <ul>
             <li><a href ="index.html">Accueil</a></li>
             <li> <a href = "barre.html">Timeline</a></li>
             <li><a  href = "Certification.html">Certification</a></li>
+            <li><a  href = "Veille.html">Veille</a></li>
           </ul>
         </div>
-        <section style="background-color: #ffffff;">
-            <div class="bg-gray-300 text-black py-8">
-              <div class="container mx-auto flex flex-col items-start md:flex-row my-12 md:my-24">
-                <div class="flex flex-col w-full sticky md:top-36 lg:w-1/3 mt-2 md:mt-12 px-8">
-                  <p class="text-3xl md:text-4xl leading-normal md:leading-relaxed mb-2">Github</p>
-                  <p class="text-sm md:text-base text-gray-900 mb-4">
-                    Tous mes projets sont disponible sur github 
-                  </p>
-                  <a href="https://github.com/louanp"
-                    class="bg-transparent mr-auto hover:bg-blue-500 text-blue-500 hover:text-black rounded shadow hover:shadow-lg py-2 px-4 border border-blue-300 hover:border-transparent">
-                    louanp</a>
-                </div>
+        <section style="background-color: #fefce8;">
+            <div class="bg-yellow-50 text-blue-700 py-8">        
+                <div class="container mx-auto flex flex-col items-start md:flex-row my-12 md:my-24">
+                  <div class="flex flex-col w-full sticky md:top-36 lg:w-1/3 mt-2 md:mt-12 px-8">
+                    <p class="text-3xl md:text-4xl leading-normal md:leading-relaxed mb-2">Github</p>
+                    <p class="text-sm md:text-base text-blue-700 mb-4">
+                      Tous mes projets sont disponible sur github 
+                    </p>
+                    <a href="https://github.com/louanp"
+                      class="bg-transparent mr-auto hover:bg-blue-500 text-blue-500 hover:text-black rounded shadow hover:shadow-lg py-2 px-4 border border-blue-300 hover:border-transparent">
+                      louanp</a>
+                      <p class="text-3xl md:text-4xl leading-normal md:leading-relaxed mb-2 mt-12">Projet en cours</p>
+                      <p class="text-sm md:text-base text-blue-700 mb-4">
+                        Création d'un site web pour une roulotte à l'étranger : Sarracenus
+                    </p>
+                  </div> 
                 <div class="ml-0 md:ml-12 lg:w-2/3 sticky">
                   <div class="container mx-auto w-full h-full">
                     <div class="relative wrap overflow-hidden p-10 h-full">
@@ -92,10 +101,10 @@
                         <div class="order-1 w-5/12 px-1 py-4 text-right">
                           <p class="mb-3 text-base text-blue-300">1 Septembre, 2022</p>
                           <h4 class="mb-3 font-bold text-lg md:text-2xl">Entré en BTS</h4>
-                          <p class="text-sm md:text-base leading-snug text-gray-900 text-opacity-100">
+                          <p class="text-sm md:text-base leading-snug text-blue-500 text-opacity-100">
                             Début des AP, Egnaro en réseau (Montage d'un réseau d'entreprise), Site en Developement(Premier site html)
                           </p>
-                          <a href="AP1.html" class="mb-3 w-33 bg-white tracking-wide text-gray-800 font-bold rounded border-b-2 border-blue-500 hover:border-blue-600 hover:bg-blue-500 hover:text-white shadow-md py-2 px-6 inline-flex items-center">
+                          <a href="AP1.html" class="mb-3 w-33 mt-4 bg-white tracking-wide text-gray-800 font-bold rounded border-b-2 border-blue-500 hover:border-blue-600 hover:bg-blue-500 hover:text-white shadow-md py-2 px-6 inline-flex items-center">
                                 <span class="px-3 mx-auto">Les projets</span>
                           </a>
                         </div>
@@ -105,10 +114,10 @@
                         <div class="order-1  w-5/12 px-1 py-4 text-left">
                           <p class="mb-3 text-base text-blue-300">Février, 2023</p>
                           <h4 class="mb-3 font-bold text-lg md:text-2xl">Semestre 2</h4>
-                          <p class="text-sm md:text-base leading-snug text-gray-900 text-opacity-100">
+                          <p class="text-sm md:text-base leading-snug text-blue-500 text-opacity-100">
                             Le choix de la spécialité etant fait je ne ferais plus que tu dev. Début AP 2 : Psychoquizz
                           </p>
-                          <a href="AP2.html" class="mb-3 w-32 bg-white tracking-wide text-gray-800 font-bold rounded border-b-2 border-blue-500 hover:border-blue-600 hover:bg-blue-500 hover:text-white shadow-md py-2 px-6 inline-flex items-center">
+                          <a href="AP2.html" class="mb-3 w-32 mt-4 bg-white tracking-wide text-gray-800 font-bold rounded border-b-2 border-blue-500 hover:border-blue-600 hover:bg-blue-500 hover:text-white shadow-md py-2 px-6 inline-flex items-center">
                             <span class="mx-auto">Le Projet</span>
                           </a>
                         </div>
@@ -118,10 +127,10 @@
                         <div class="order-1 w-5/12 px-1 py-4 text-right">
                           <p class="mb-3 text-base text-blue-300"> Mai, 2022</p>
                           <h4 class="mb-3 font-bold text-lg md:text-2xl">Début du stage </h4>
-                          <p class="text-sm md:text-base leading-snug text-gray-900 text-opacity-100">
+                          <p class="text-sm md:text-base leading-snug text-blue-500 text-opacity-100">
                             J'ai effectué mon stage chez Assistant office a Plestin-les-grèves
                           </p>
-                          <a href="Stage1.html" class="mb-3 w-33 bg-white tracking-wide text-gray-800 font-bold rounded border-b-2 border-blue-500 hover:border-blue-600 hover:bg-blue-500 hover:text-white shadow-md py-2 px-6 inline-flex items-center">
+                          <a href="Stage1.html" class="mb-3 w-33 mt-4 bg-white tracking-wide text-gray-800 font-bold rounded border-b-2 border-blue-500 hover:border-blue-600 hover:bg-blue-500 hover:text-white shadow-md py-2 px-6 inline-flex items-center">
                             <span class="px-2 mx-auto">Le Projet</span>
                           </a>
                         </div>
@@ -131,10 +140,10 @@
                         <div class="order-1  w-5/12 px-1 py-4">
                           <p class="mb-3 text-base text-blue-300">Septembre, 2023</p>
                           <h4 class="mb-3 font-bold  text-lg md:text-2xl text-left">2éme Année</h4>
-                          <p class="text-sm md:text-base leading-snug text-gray-900 text-opacity-100">
+                          <p class="text-sm md:text-base leading-snug text-blue-500 text-opacity-100">
                             Pour l'ap de ce semestre nous devions faire un site Web de type chronopost ou mondial relais pour la gestions des colis
                           </p>
-                          <a href="AP3.html" class="mb-3 w-33 bg-white tracking-wide text-gray-800 font-bold rounded border-b-2 border-blue-500 hover:border-blue-600 hover:bg-blue-500 hover:text-white shadow-md py-2 px-6 inline-flex items-center">
+                          <a href="AP3.html" class="mb-3 w-33 mt-4 bg-white tracking-wide text-gray-800 font-bold rounded border-b-2 border-blue-500 hover:border-blue-600 hover:bg-blue-500 hover:text-white shadow-md py-2 px-6 inline-flex items-center">
                             <span class="mx-auto">Le projet</span>
                           </a>
                         </div>
@@ -144,10 +153,10 @@
                         <div class="order-1 w-5/12 px-1 py-4 text-right">
                           <p class="mb-3 text-base text-blue-300"> Février, 2024</p>
                           <h4 class="mb-3 font-bold text-lg md:text-2xl">Stage</h4>
-                          <p class="text-sm md:text-base leading-snug text-gray-900 text-opacity-100">
+                          <p class="text-sm md:text-base leading-snug text-blue-500 text-opacity-100">
                             J'ai effectué ce stage chez Studio Sale qui est une agence de Webdesign situé a Perros-Guirec 
                           </p>
-                          <a href="Stage2.html" class="mb-3 w-33 bg-white tracking-wide text-gray-800 font-bold rounded border-b-2 border-blue-500 hover:border-blue-600 hover:bg-blue-500 hover:text-white shadow-md py-2 px-6 inline-flex items-center">
+                          <a href="Stage2.html" class="mb-3 w-33 mt-4 bg-white tracking-wide text-gray-800 font-bold rounded border-b-2 border-blue-500 hover:border-blue-600 hover:bg-blue-500 hover:text-white shadow-md py-2 px-6 inline-flex items-center">
                             <span class="mx-auto">Le projet</span>
                           </a>
                         </div>
@@ -157,10 +166,10 @@
                         <div class="order-1  w-5/12 px-1 py-4">
                           <p class="mb-3 text-base text-blue-300">Mars, 2024 </p>
                           <h4 class="mb-3 font-bold  text-lg md:text-2xl text-left">AP Semestre 2</h4>
-                          <p class="text-sm md:text-base leading-snug text-gray-900 text-opacity-100">
+                          <p class="text-sm md:text-base leading-snug text-blue-500 text-opacity-100">
                             Nous devons réaliser une application de fidelite de restauration rapide en solo 
                           </p>
-                          <a href="AP4.html" class="mb-3 w-33 bg-white tracking-wide text-gray-800 font-bold rounded border-b-2 border-blue-500 hover:border-blue-600 hover:bg-blue-500 hover:text-white shadow-md py-2 px-6 inline-flex items-center">
+                          <a href="AP4.html" class="mb-3 w-33 mt-4 bg-white tracking-wide text-gray-800 font-bold rounded border-b-2 border-blue-500 hover:border-blue-600 hover:bg-blue-500 hover:text-white shadow-md py-2 px-6 inline-flex items-center">
                             <span class="mx-auto">Le projet</span>
                           </a>
                         </div>
@@ -185,5 +194,5 @@
             document.querySelector('.sidebar').classList.remove('active');
             });
         </script>        
-    </body>
+   </body>
 </html>

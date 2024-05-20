@@ -7,22 +7,83 @@
     <title>Certification</title>
     <!-- Inclure Tailwind CSS -->
     <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <style>
+      /* Styles pour la barre de navigation */
+      .sidebar {
+        width: 200px;
+        height: 100vh;
+        background-color: #fefce8;
+        position: fixed;
+        top: 0;
+        left: -200px;
+        transition: left 0.3s ease;
+      }
+  
+      .sidebar.active {
+        left: 0;
+      }
+  
+      .sidebar ul {
+        padding: 0;
+        margin: 0;
+        list-style: none;
+      }
+  
+      .sidebar li {
+        padding: 1rem;
+        color: #1D4ED8;
+      }
+  
+      .sidebar li:hover {
+        background-color: #5372c7;
+      }
+  
+      /* Style pour le bouton image */
+      #sidebar-toggle {
+        position: fixed;
+        top: 0;
+        left: 0;
+        margin: 20px;
+        transition: margin-left 0.3s ease;
+      }
+  
+      /* Animation du bouton image lors de l'apparition de la barre de navigation */
+      .sidebar.active ~ #sidebar-toggle {
+        margin-left: 220px;
+      }
+  
+      /* Style pour le bouton de redirection */
+      #redirect-button {
+        position: fixed;
+        bottom: 20px;
+        right: 20px;
+      }
+    </style>
 </head>
 
-<body class="bg-gray-300">
-    <div class="bg-gray-300 py-24 sm:py-32">
+<body class="bg-yellow-50">
+    <div class="bg-yellow-50 py-24 sm:py-32">
+      <img id="sidebar-toggle" src="../image/menuBleu.png" alt="Menu" class="cursor-pointer w-10">
+      <div class="sidebar">
+        <ul>
+          <li><a href ="index.html">Accueil</a></li>
+          <li> <a href = "barre.html">Timeline</a></li>
+          <li><a  href = "Certification.html">Certification</a></li>
+          <li><a  href = "Veille.html">Veille</a></li>
+        </ul>
+      </div>
         <div class="mx-auto grid max-w-7xl gap-x-8 gap-y-20 px-6 lg:px-8 xl:grid-cols-3">
           <div class="max-w-2xl">
-            <h2 class="text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">Veille Technologie</h2>
-            <p class="mt-6 text-lg leading-8 text-gray-600">Je pratique ma veille Technologique principalement sur ces réseaux sociaux : </p>
+            <h2 class="text-3xl font-bold tracking-tight text-blue-700 sm:text-4xl">Veille Technologie</h2>
+            <p class="mt-6 text-lg leading-8 text-blue-700">Je pratique ma veille Technologique principalement sur ces réseaux sociaux : </p>
           </div>
           <ul role="list" class="grid gap-x-8 gap-y-12 sm:grid-cols-2 sm:gap-y-16 xl:col-span-2">
             <li>
               <div class="flex items-center gap-x-6">
                 <img class="h-16 w-16 rounded-full" src="https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Ftse3.mm.bing.net%2Fth%3Fid%3DOIP.1lm9KjprReA8-CMRPriawgHaEK%26pid%3DApi&f=1&ipt=0690ee4364d7342d60d4f030b15a787aaf6f1e635ce885883c7118f6433a78cb&ipo=images" alt="">
                 <div>
-                  <h3 class="text-base font-semibold leading-7 tracking-tight text-gray-900">Twitter</h3>
-                  <p class="text-sm font-semibold leading-6 text-indigo-600">Batiste Robbert, Mathis Hammel, SwiftOnSecurity</p>
+                  <h3 class="text-base font-semibold leading-7 tracking-tight text-blue-900">Twitter</h3>
+                  <p class="text-sm font-semibold leading-6 text-blue-700">Batiste Robbert, Mathis Hammel, SwiftOnSecurity</p>
                 </div>
               </div>
             </li>
@@ -30,8 +91,8 @@
                 <div class="flex items-center gap-x-6">
                   <img class="h-16 w-16 rounded-full" src="https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Ftse4.mm.bing.net%2Fth%3Fid%3DOIP.3rSTYI2unlM-9raJQJW3lwHaHa%26pid%3DApi&f=1&ipt=cfd5a85868c831ac889293069636f0e436b1cad1c04f27c304a4d5ada7671dc6&ipo=images" alt="">
                   <div>
-                    <h3 class="text-base font-semibold leading-7 tracking-tight text-gray-900">youtube</h3>
-                    <p class="text-sm font-semibold leading-6 text-indigo-600">Micode</p>
+                    <h3 class="text-base font-semibold leading-7 tracking-tight text-blue-900">youtube</h3>
+                    <p class="text-sm font-semibold leading-6 text-blue-700">Micode</p>
                   </div>
                 </div>
             </li>
@@ -39,8 +100,8 @@
                 <div class="flex items-center gap-x-6">
                   <img class="h-16 w-16 rounded-full" src="https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Ftse3.mm.bing.net%2Fth%3Fid%3DOIP.M3ObLRfptP_zys8elt2UkAHaHa%26pid%3DApi&f=1&ipt=9c9bb02502d54d0f63ab95df9aa317ae88deabc09344c476a8ba184cb825e965&ipo=images" alt="">
                   <div>
-                    <h3 class="text-base font-semibold leading-7 tracking-tight text-gray-900">Twitch</h3>
-                    <p class="text-sm font-semibold leading-6 text-indigo-600">Underscore_</p>
+                    <h3 class="text-base font-semibold leading-7 tracking-tight text-blue-900">Twitch</h3>
+                    <p class="text-sm font-semibold leading-6 text-blue-700">Underscore_</p>
                   </div>
                 </div>
             </li>
@@ -48,8 +109,8 @@
                 <div class="flex items-center gap-x-6">
                   <img class="h-16 w-16 rounded-full" src="https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Ftse3.mm.bing.net%2Fth%3Fid%3DOIP.DZZcY52tmXKFqh5DTAvH1QHaHa%26pid%3DApi&f=1&ipt=f8c90343901620b2a150ec58bba0460558ebd15dee2af23740b424acb7ad77cb&ipo=images" alt="">
                   <div>
-                    <h3 class="text-base font-semibold leading-7 tracking-tight text-gray-900">Linkdin</h3>
-                    <p class="text-sm font-semibold leading-6 text-indigo-600">ANSSI,CNIL et différent acteur français en cyber</p>
+                    <h3 class="text-base font-semibold leading-7 tracking-tight text-blue-900">Linkdin</h3>
+                    <p class="text-sm font-semibold leading-6 text-blue-700">ANSSI,CNIL et différent acteur français en cyber</p>
                   </div>
                 </div>
             </li>
@@ -57,14 +118,11 @@
                 <div class="flex items-center gap-x-6">
                   <img class="h-16 w-16 rounded-full" src="https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Ftse2.mm.bing.net%2Fth%3Fid%3DOIP.bwszlKL6VdmfhSALvzwXcAHaHa%26pid%3DApi&f=1&ipt=dd808f2b6cda60135b9416fd08fd3a4781b0a4bb77813b5b9ec621bb77d507f5&ipo=images" alt="">
                   <div>
-                    <h3 class="text-base font-semibold leading-7 tracking-tight text-gray-900">Reddit</h3>
-                    <p class="text-sm font-semibold leading-6 text-indigo-600">Forum sur les différents language pratiqué </p>
+                    <h3 class="text-base font-semibold leading-7 tracking-tight text-blue-900">Reddit</h3>
+                    <p class="text-sm font-semibold leading-6 text-blue-700">Forum sur les différents language pratiqué </p>
                   </div>
                 </div>
             </li>
-            
-      
-            <!-- More people... -->
         </ul>
         </div>
         <div class="flex justify-center mt-6">
@@ -73,6 +131,14 @@
             </a>
         </div>
     </div>
+    <script>
+      document.getElementById('sidebar-toggle').addEventListener('click', function() {
+      document.querySelector('.sidebar').classList.toggle('active');
+      });
+      document.getElementById('sidebar').addEventListener('mouseleave', function() {
+      document.querySelector('.sidebar').classList.remove('active');
+      });
+  </script>        
 </body>
 
 </html>

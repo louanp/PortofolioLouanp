@@ -3,6 +3,8 @@
     <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <script src="https://cdn.tailwindcss.com"></script>
     <title>Timeline</title>
     <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
     <style>
@@ -89,6 +91,7 @@
                         Création d'un site web pour une roulotte à l'étranger : Sarracenus
                     </p>
                   </div> 
+<!----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------->
                 <div class="ml-0 md:ml-12 lg:w-2/3 sticky">
                   <div class="container mx-auto w-full h-full">
                     <div class="relative wrap overflow-hidden p-10 h-full">
@@ -102,13 +105,46 @@
                           <p class="mb-3 text-base text-blue-300">1 Septembre, 2022</p>
                           <h4 class="mb-3 font-bold text-lg md:text-2xl">Entré en BTS</h4>
                           <p class="text-sm md:text-base leading-snug text-blue-500 text-opacity-100">
-                            Début des AP, Egnaro en réseau (Montage d'un réseau d'entreprise), Site en Developement(Premier site html)
+                            Début des AP, Réseau : Egnaro (Montage d'un réseau d'entreprise), Devellopement : site métier (Premier site html)
                           </p>
-                          <a href="AP1.html" class="mb-3 w-33 mt-4 bg-white tracking-wide text-gray-800 font-bold rounded border-b-2 border-blue-500 hover:border-blue-600 hover:bg-blue-500 hover:text-white shadow-md py-2 px-6 inline-flex items-center">
-                                <span class="px-3 mx-auto">Les projets</span>
-                          </a>
+                          <button id="openButton" class="mb-3 w-33 mt-4 bg-white tracking-wide text-gray-800 font-bold rounded border-b-2 border-blue-500 hover:border-blue-600 hover:bg-blue-500 hover:text-white shadow-md py-2 px-6 inline-flex items-center">
+                                 <span class="px-3 mx-auto">Les projets</span> 
+                          </button>
                         </div>
                       </div>
+
+                        <div id="overlay" class="fixed hidden z-40 w-screen h-screen inset-0 bg-gray-900 bg-opacity-60"></div>
+
+                        <div id="dialog"
+                        class="hidden fixed z-50 top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-5/6 h-3/4 bg-yellow-50 text-blue-700 rounded-md px-8 py-6 space-y-5 drop-shadow-lg">
+                        <div class="flex">
+                            <!-- Image à gauche -->
+                            <div class="w-2/3 h-full">
+                                <div class="flex flex-col justify-between h-full">
+                                    <img src="../image/Egnaro.PNG" alt="Image" class="w-5/6 h-80 rounded-md mb-2">
+                                    <img src="../image/SiteMetier1.PNG" alt="Image" class="w-5/6 h-80 rounded-md">
+                                </div>
+                            </div>
+                            <!-- Brève description à droite -->
+                            <div class="w-1/3 h-full px-4 flex flex-col justify-center">
+                                <h1 class="text-2xl font-semibold text-center">Les Projets</h1>
+                                <div class="py-5 mt-10">
+                                    <div class="flex items-center border rounded-md mt-4">
+                                        <p class="text-lg flex-grow p-4">Réseau : Montage simple d'un réseau d'entreprise</p>
+                                    </div>
+                                    <div class="flex items-center border rounded-md mt-36">
+                                        <p class="text-lg flex-grow p-4">Développement : Site statique HTML/CSS sur la présentation d'un métier</p>
+                                    </div>
+                                </div>
+                                <div class="absolute bottom-0 right-0 mb-5 mr-5">
+                                    <!-- This button is used to close the dialog -->
+                                    <button id="close" class="px-5 py-2 bg-indigo-500 hover:bg-indigo-700 text-white cursor-pointer rounded-md">
+                                        Close</button>
+                                </div>
+                            </div>
+                          </div>
+                       </div>
+<!----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------->
                       <div class="mb-8 flex justify-between items-center w-full right-timeline">
                         <div class="order-1 w-5/12"></div>
                         <div class="order-1  w-5/12 px-1 py-4 text-left">
@@ -117,11 +153,13 @@
                           <p class="text-sm md:text-base leading-snug text-blue-500 text-opacity-100">
                             Le choix de la spécialité etant fait je ne ferais plus que tu dev. Début AP 2 : Psychoquizz
                           </p>
-                          <a href="AP2.html" class="mb-3 w-32 mt-4 bg-white tracking-wide text-gray-800 font-bold rounded border-b-2 border-blue-500 hover:border-blue-600 hover:bg-blue-500 hover:text-white shadow-md py-2 px-6 inline-flex items-center">
+                          <button id="openButton2" class="mb-3 w-32 mt-4 bg-white tracking-wide text-gray-800 font-bold rounded border-b-2 border-blue-500 hover:border-blue-600 hover:bg-blue-500 hover:text-white shadow-md py-2 px-6 inline-flex items-center">
                             <span class="mx-auto">Le Projet</span>
-                          </a>
+                          </button>
                         </div>
                       </div>
+                       
+<!----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------->                      
                       <div class="mb-8 flex justify-between flex-row-reverse items-center w-full left-timeline">
                         <div class="order-1 w-5/12"></div>
                         <div class="order-1 w-5/12 px-1 py-4 text-right">
@@ -130,11 +168,12 @@
                           <p class="text-sm md:text-base leading-snug text-blue-500 text-opacity-100">
                             J'ai effectué mon stage chez Assistant office a Plestin-les-grèves
                           </p>
-                          <a href="Stage1.html" class="mb-3 w-33 mt-4 bg-white tracking-wide text-gray-800 font-bold rounded border-b-2 border-blue-500 hover:border-blue-600 hover:bg-blue-500 hover:text-white shadow-md py-2 px-6 inline-flex items-center">
+                          <button  class="mb-3 w-33 mt-4 bg-white tracking-wide text-gray-800 font-bold rounded border-b-2 border-blue-500 hover:border-blue-600 hover:bg-blue-500 hover:text-white shadow-md py-2 px-6 inline-flex items-center">
                             <span class="px-2 mx-auto">Le Projet</span>
-                          </a>
+                          </button>
                         </div>
                       </div>
+<!----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------->                      
                       <div class="mb-8 flex justify-between items-center w-full right-timeline">
                         <div class="order-1 w-5/12"></div>
                         <div class="order-1  w-5/12 px-1 py-4">
@@ -143,11 +182,12 @@
                           <p class="text-sm md:text-base leading-snug text-blue-500 text-opacity-100">
                             Pour l'ap de ce semestre nous devions faire un site Web de type chronopost ou mondial relais pour la gestions des colis
                           </p>
-                          <a href="AP3.html" class="mb-3 w-33 mt-4 bg-white tracking-wide text-gray-800 font-bold rounded border-b-2 border-blue-500 hover:border-blue-600 hover:bg-blue-500 hover:text-white shadow-md py-2 px-6 inline-flex items-center">
+                          <button id="openButton3" class="mb-3 w-33 mt-4 bg-white tracking-wide text-gray-800 font-bold rounded border-b-2 border-blue-500 hover:border-blue-600 hover:bg-blue-500 hover:text-white shadow-md py-2 px-6 inline-flex items-center">
                             <span class="mx-auto">Le projet</span>
-                          </a>
+                          </button>
                         </div>
                       </div>
+ <!----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------->                     
                       <div class="mb-8 flex justify-between flex-row-reverse items-center w-full left-timeline">
                         <div class="order-1 w-5/12"></div>
                         <div class="order-1 w-5/12 px-1 py-4 text-right">
@@ -156,11 +196,12 @@
                           <p class="text-sm md:text-base leading-snug text-blue-500 text-opacity-100">
                             J'ai effectué ce stage chez Studio Sale qui est une agence de Webdesign situé a Perros-Guirec 
                           </p>
-                          <a href="Stage2.html" class="mb-3 w-33 mt-4 bg-white tracking-wide text-gray-800 font-bold rounded border-b-2 border-blue-500 hover:border-blue-600 hover:bg-blue-500 hover:text-white shadow-md py-2 px-6 inline-flex items-center">
+                          <Button id="openButtonStage2" class="mb-3 w-33 mt-4 bg-white tracking-wide text-gray-800 font-bold rounded border-b-2 border-blue-500 hover:border-blue-600 hover:bg-blue-500 hover:text-white shadow-md py-2 px-6 inline-flex items-center">
                             <span class="mx-auto">Le projet</span>
-                          </a>
+                          </Button>
                         </div>
                       </div>
+ <!----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------->                     
                       <div class="mb-8 flex justify-between items-center w-full right-timeline">
                         <div class="order-1 w-5/12"></div>
                         <div class="order-1  w-5/12 px-1 py-4">
@@ -169,9 +210,9 @@
                           <p class="text-sm md:text-base leading-snug text-blue-500 text-opacity-100">
                             Nous devons réaliser une application de fidelite de restauration rapide en solo 
                           </p>
-                          <a href="AP4.html" class="mb-3 w-33 mt-4 bg-white tracking-wide text-gray-800 font-bold rounded border-b-2 border-blue-500 hover:border-blue-600 hover:bg-blue-500 hover:text-white shadow-md py-2 px-6 inline-flex items-center">
+                          <Button id="openButtonAp4" class="mb-3 w-33 mt-4 bg-white tracking-wide text-gray-800 font-bold rounded border-b-2 border-blue-500 hover:border-blue-600 hover:bg-blue-500 hover:text-white shadow-md py-2 px-6 inline-flex items-center">
                             <span class="mx-auto">Le projet</span>
-                          </a>
+                          </Button>
                         </div>
                       </div>
                     </div>
@@ -185,14 +226,216 @@
               </a>
             </div>
         </section>
+        <div id="overlay2" class="fixed hidden z-40 w-screen h-screen inset-0 bg-gray-900 bg-opacity-60"></div>
+
+        <div id="dialog2"
+        class="hidden fixed z-50 top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-5/6 h-3/4 bg-yellow-50 text-blue-700 rounded-md px-8 py-6 space-y-5 drop-shadow-lg">
+        <div class="flex">
+            <!-- Image à gauche -->
+            <div class="w-2/3 h-full">
+                <div class="flex flex-col justify-between h-full">
+                    <img src="../image/Psychoquizz.PNG" alt="Image" class="w-5/6 h-96 rounded-md mb-2 mt-36">
+                </div>
+            </div>
+            <!-- Brève description à droite -->
+            <div class="w-1/3 h-4/5 px-4 flex flex-col justify-center">
+                <h1 class="text-2xl font-semibold text-center">Le Projet</h1>
+                <div class="py-5 mt-10">
+                    <div class="flex items-center border rounded-md mt-36">
+                        <p class="text-lg flex-grow p-4">Objectif : Faire un quizz en ligne pour aider les premières années à choisir leur spécialité (dev ou réseaux)</p>
+                    </div>
+                </div>
+                <div class="absolute bottom-0 right-0 mb-5 mr-5">
+                    <!-- This button is used to close the dialog -->
+                    <button id="close2" class="px-5 py-2 bg-indigo-500 hover:bg-indigo-700 text-white cursor-pointer rounded-md">
+                        Close</button>
+                </div>
+           </div>
+          </div>
+        </div>
+
+        <div id="overlayAP3" class="fixed hidden z-40 w-screen h-screen inset-0 bg-gray-900 bg-opacity-60"></div>
+
+        <div id="Ap3" class="hidden fixed z-50 top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-5/6 h-3/4 bg-yellow-50 text-blue-700 rounded-md px-8 py-6 space-y-5 drop-shadow-lg">
+        <div class="flex">
+            <!-- Image à gauche -->
+            <div class="w-2/3 h-full">
+                <div class="flex flex-col justify-between h-full">
+                    <img src="../image/LemRelais1.PNG" alt="Image" class="w-5/6 h-96 rounded-md mb-2 mt-36">
+                </div>
+            </div>
+            <!-- Brève description à droite -->
+            <div class="w-1/3 h-4/5 px-4 flex flex-col justify-center">
+                <h1 class="text-2xl font-semibold text-center">Le Projet</h1>
+                <div class="py-5 mt-10">
+                    <div class="flex items-center border rounded-md mt-36">
+                        <p class="text-lg flex-grow p-4">Objectif : Faire une plateforme de livraison de colis, avec suivis de colis, carte des relais, interface administrateur avec la gestions des relais</p>
+                    </div>
+                </div>
+                <div class="absolute bottom-0 right-0 mb-5 mr-5 flex">
+                  <a href="AP3.html" class="px-5 py-2 bg-indigo-500 hover:bg-indigo-700 text-white cursor-pointer rounded-md flex-grow mr-2">
+                      Photo</a>
+                  <button id="close3" class="px-5 py-2 bg-indigo-500 hover:bg-indigo-700 text-white cursor-pointer rounded-md flex-grow">
+                      Close</button>  
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div id="overlayStage2" class="fixed hidden z-40 w-screen h-screen inset-0 bg-gray-900 bg-opacity-60"></div>
+
+        <div id="Stage2" class="hidden fixed z-50 top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-5/6 h-3/4 bg-yellow-50 text-blue-700 rounded-md px-8 py-6 space-y-5 drop-shadow-lg">
+        <div class="flex">
+            <!-- Image à gauche -->
+            <div class="w-2/3 h-full">
+                <div class="flex flex-col justify-between h-full">
+                    <img src="../image/Logo-studio-sale_Classique-1043429177.png" alt="Image" class="w-96 h-96 rounded-md mb-2 mt-36 ml-64">
+                </div>
+            </div>
+            <!-- Brève description à droite -->
+            <div class="w-1/3 h-4/5 px-4 flex flex-col justify-center">
+                <h1 class="text-2xl font-semibold text-center">Le Projet</h1>
+                <div class="py-5 mt-10">
+                    <div class="flex items-center border rounded-md mt-36">
+                        <p class="text-lg flex-grow p-4">Objectif : Tache de fond en php sur des sites WordPresse + animations js </p>
+                    </div>
+                    <div class="flex items-center border rounded-md mt-10">
+                      <p class="text-lg flex-grow p-4">Tache réaliser : envois de mail a partir de formulaire, trie de donnée , gestion api , animations souris en js  </p>
+                  </div>
+                </div>
+                <div class="absolute bottom-0 right-0 mb-5 mr-5">
+                    <button id="closeStage2" class="px-5 py-2 bg-indigo-500 hover:bg-indigo-700 text-white cursor-pointer rounded-md">
+                        Close</button>  
+                </div>
+            </div>
+          </div>
+        </div>
+
+        <div id="overlayAP4" class="fixed hidden z-40 w-screen h-screen inset-0 bg-gray-900 bg-opacity-60"></div>
+
+        <div id="Ap4" class="hidden fixed z-50 top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-5/6 h-3/4 bg-yellow-50 text-blue-700 rounded-md px-8 py-6 space-y-5 drop-shadow-lg">
+          <div class="flex">
+              <!-- Images côte à côte -->
+              <div class="w-2/3 h-full flex flex-wrap justify-center items-center">
+                  <!-- Image 1 -->
+                  <img src="../image/AP41.PNG" alt="Image" class="w-80 h-3/4 rounded-md mt-6 mr-4">
+                  <!-- Image 2 -->
+                  <img src="../image/AP42.PNG" alt="Image" class="w-80 h-3/4 rounded-md mt-6 mr-4">
+              </div>
+              <!-- Brève description à droite -->
+              <div class="w-1/3 h-4/5 px-4 flex flex-col justify-center">
+                  <h1 class="text-2xl font-semibold text-center">Le Projet</h1>
+                  <div class="py-5 mt-10">
+                      <div class="flex items-center border rounded-md mt-36">
+                          <p class="text-lg flex-grow p-4">Objectif : Faire une application de fidelité pour une chaine de restauration rapide </p>
+                      </div>
+                  </div>
+                  <div class="absolute bottom-0 right-0 mb-5 mr-5">
+                      <button id="closeAp4" class="px-5 py-2 bg-indigo-500 hover:bg-indigo-700 text-white cursor-pointer rounded-md">
+                          Close</button>  
+                  </div>
+              </div>
+          </div>
+      </div>
+        </div>
         <script>
             // Fonction pour afficher ou masquer la barre de navigation
+            
+            var openButton = document.getElementById('openButton');
+            var dialog = document.getElementById('dialog');
+            var closeButton = document.getElementById('close');
+            var overlay = document.getElementById('overlay');
+
+            // show the overlay and the dialog
+            openButton.addEventListener('click', function () {
+              console.log("Bouton cliqué !");
+                dialog.classList.remove('hidden');
+                overlay.classList.remove('hidden');
+            });
+
+            // hide the overlay and the dialog
+            closeButton.addEventListener('click', function () {
+                dialog.classList.add('hidden');
+                overlay.classList.add('hidden');
+            });
+            var openButton2 = document.getElementById('openButton2');
+            var dialog2 = document.getElementById('dialog2');
+            var closeButton2 = document.getElementById('close2');
+            var overlay2 = document.getElementById('overlay2');
+
+            // show the overlay and the dialog
+            openButton2.addEventListener('click', function () {
+              console.log("Bouton cliqué !");
+                dialog2.classList.remove('hidden');
+                overlay2.classList.remove('hidden');
+            });
+
+            // hide the overlay and the dialog
+            closeButton2.addEventListener('click', function () {
+                dialog2.classList.add('hidden');
+                overlay2.classList.add('hidden');
+            });
+
+            var openButton3 = document.getElementById('openButton3');
+            var dialogAP3 = document.getElementById('Ap3');
+            var closeButton3 = document.getElementById('close3');
+            var overlay3 = document.getElementById('overlayAP3');
+
+            // Afficher le dialog3
+            openButton3.addEventListener('click', function () {
+                console.log("Bouton cliqué !");
+                dialogAP3.classList.remove('hidden');
+                overlay3.classList.remove('hidden');
+            });
+
+            // Cacher le dialog3
+            closeButton3.addEventListener('click', function () {
+              dialogAP3.classList.add('hidden');
+                overlay3.classList.add('hidden');
+            });
+            
+            var openButtonStage2 = document.getElementById('openButtonStage2');
+            var dialogStage2 = document.getElementById('Stage2');
+            var closeButtonStage2 = document.getElementById('closeStage2');
+            var overlayStage2 = document.getElementById('overlayStage2');
+
+            // Afficher le dialog3
+            openButtonStage2.addEventListener('click', function () {
+                console.log("Bouton cliqué !");
+                dialogStage2.classList.remove('hidden');
+                overlayStage2.classList.remove('hidden');
+            });
+
+            // Cacher le dialog3
+            closeButtonStage2.addEventListener('click', function () {
+              dialogStage2.classList.add('hidden');
+                overlayStage2.classList.add('hidden');
+            });
+
+            var openButtonAp4 = document.getElementById('openButtonAp4');
+            var dialogAp4 = document.getElementById('Ap4');
+            var closeButtonAp4 = document.getElementById('closeAp4');
+            var overlayAp4 = document.getElementById('overlayAP4');
+     
+            openButtonAp4.addEventListener('click', function () {
+                console.log("Bouton cliqué !");
+                dialogAp4.classList.remove('hidden');
+                overlayAp4.classList.remove('hidden');
+            });
+
+            
+            closeButtonAp4.addEventListener('click', function () {
+              dialogAp4.classList.add('hidden');
+              overlayAp4.classList.add('hidden');
+            });
+
             document.getElementById('sidebar-toggle').addEventListener('click', function() {
             document.querySelector('.sidebar').classList.toggle('active');
             });
-            document.getElementById('sidebar').addEventListener('mouseleave', function() {
+            document.getElementById('sidebar').addEventListener('click', function() {
             document.querySelector('.sidebar').classList.remove('active');
             });
-        </script>        
+        </script>
+                
    </body>
 </html>
